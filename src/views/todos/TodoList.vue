@@ -3,6 +3,7 @@
     <ul>
       <li v-for="(todo, idx) in todos" :key="idx">
         <span @click="updateTodoStatus(todo)" :class="{ completed: todo.completed }">{{ todo.title }}</span>
+        <img :src="todo.img" alt="img">
         <button @click="deleteTodo(todo)" class="todo-btn">X</button>
       </li>
     </ul>
