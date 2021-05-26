@@ -75,6 +75,9 @@ export default {
           console.log(res)
           todo.completed = !todo.completed
         })
+        .catch(err => {
+          console.log(err.response)
+        })
       },
     },
   created: function () {
