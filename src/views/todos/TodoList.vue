@@ -60,6 +60,7 @@ export default {
         })
     },
     updateTodoStatus: function (todo) {
+      console.log(todo)
       const todoItem = {
         ...todo,
         completed: !todo.completed
