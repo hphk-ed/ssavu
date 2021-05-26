@@ -60,12 +60,14 @@ export default {
         })
     },
     updateTodoStatus: function (todo) {
-      console.log(todo)
+      const img = todo.img ? todo.img : ''
       const todoItem = {
         ...todo,
+        img,
         completed: !todo.completed
       }
 
+      console.log(todoItem)
       axios({
         method: 'put',
         url: `${SERVER_URL}/todos/${todo.id}/`,
